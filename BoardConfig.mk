@@ -8,7 +8,28 @@ DEVICE_PATH := device/infinix/X6816
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS +=
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    gz \
+    lk \
+    logo \
+    md1img \
+    preloader \
+    product \
+    scp \
+    spmfw \
+    sspm \
+    system \
+    system_ext \
+    tee \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor \
+    vendor_boot
+
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
