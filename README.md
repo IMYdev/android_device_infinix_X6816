@@ -1,4 +1,4 @@
-# Android device tree for Infinix Infinix X6816 (Infinix-X6816)
+# Android device tree for Infinix HOT 12 Play (X6816)
 
 ```
 #
