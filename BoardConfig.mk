@@ -30,6 +30,7 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_boot
 
+
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
@@ -53,6 +54,9 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := Infinix-X6816
 TARGET_NO_BOOTLOADER := true
+
+# Build rules
+BUILD_BROKEN_DUP_RULES := true
 
 # Display
 TARGET_SCREEN_DENSITY := 320

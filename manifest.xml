@@ -120,11 +120,6 @@
         <fqname>@1.1::IUsbGadget/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.focaltech.fingerprint</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IFocalFingerprintService/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.aee</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IAee/AEE</fqname>
