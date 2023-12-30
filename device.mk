@@ -32,6 +32,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Prebuilts - Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
