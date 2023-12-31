@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "IMYdev/android_vendor_infinix_X6816",
+    "target_path": "vendor/infinix/X6816"
+  },
+  {
+    "repository": "IMYdev/android_kernel_infinix_X6816",
+    "target_path": "kernel/infinix/X6816"
+  }
+]
