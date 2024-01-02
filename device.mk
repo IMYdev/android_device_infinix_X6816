@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts - Kernel
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
+    $(LOCAL_PATH)-kernel/dtb.img:dtb.img
 
 # Health
 PRODUCT_PACKAGES += \
