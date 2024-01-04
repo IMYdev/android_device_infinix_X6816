@@ -12,8 +12,7 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     system \
-    vbmeta \
-    vendor
+    vbmeta
 
 
 BOARD_USES_RECOVERY_AS_BOOT := true
