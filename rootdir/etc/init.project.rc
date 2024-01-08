@@ -1,7 +1,5 @@
 # MTK project .rc configure
 
-import init.mt6765.usb.rc
-
 on early-init
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules helloworld.ko mt6357-accdet.ko trace_mmstat.ko
 
@@ -10,6 +8,12 @@ on init
     mkdir /storage/usbotg 0700 root root
 
 on post-fs-data
+	mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+    #thermal
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 0666 /sys/module/migt/parameters/mi_viptask
+    restorecon /sys/module/migt/parameters/mi_viptask
 
 #Camera
     chmod 0660 /dev/MAINAF
@@ -40,18 +44,6 @@ on post-fs-data
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
-    # DTS_AUDIO START
-    mkdir /data/vendor/audio 0770  audio audio
-    mkdir /data/vendor/audio/dts 0771 media audio
-
-    copy /data/vendor/audio/dts/dts_audio_settings /data/vendor/audio/dts/temp
-    copy /vendor/etc/dts/dts_audio_settings /data/vendor/audio/dts/dts_audio_settings
-    copy /data/vendor/audio/dts/temp data/vendor/audio/dts/dts_audio_settings
-    rm /data/vendor/audio/dts/temp
-    chown audioserver audio /data/vendor/audio/dts/dts_audio_settings
-    setprop ro.vendor.dts.licensepath "/vendor/etc/dts/"
-    setprop ro.vendor.dts.cfgpath "/vendor/etc/dts/"
-    # DTS_AUDIO END
 
 on init
     # Refer to http://source.android.com/devices/tech/storage/index.html

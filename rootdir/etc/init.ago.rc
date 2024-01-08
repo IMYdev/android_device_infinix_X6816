@@ -6,7 +6,5 @@ on post-fs-data
     write /proc/sys/vm/swappiness 100
     write /sys/kernel/mm/swap/vma_ra_enabled false
 
-#SPD: modify for swap zram write-back by shuang.zhou at 20201020 start
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.enableswap
-#SPD: modify for swap zram write-back by shuang.zhou at 20201020 end

@@ -1,7 +1,3 @@
-##NFBD:Add fm for nfc TSDT-151 by yunfei.wu 20210203 start
-import /vendor/etc/init/hw/init.stnfc.rc
-import /system_ext/etc/init/hw/init.stnfc.rc
-##NFBD:Add fm for nfc TSDT-151 by yunfei.wu 20210203 start
 # MTK connectivity .rc configure
 
 on post-fs-data
@@ -35,11 +31,6 @@ on post-fs-data
 # BT relayer mode used VCOM
     chown bluetooth bluetooth /dev/ttyGS2
     chmod 0660 /dev/ttyGS2
-
-# ITD:add dualcam  by lei.ni 20200803 start
-# Camera
-    mkdir /data/vendor/arcsoft 0777 system system
-# ITD:add dualcam  by lei.ni 20200803 end
 
 #
 # Connectivity related device nodes & configuration (end)
