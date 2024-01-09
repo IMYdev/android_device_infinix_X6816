@@ -62,7 +62,7 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.mtk.rc",
+    name: "ueventd.rc",
     src: "etc/ueventd.rc",
     filename_from_src: true,
     vendor: true,
@@ -79,11 +79,5 @@ prebuilt_etc {
     name: "init.mt6765.volte.rc",
     src: "etc/init.mt6765.volte.rc",
     relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "fstab.enableswap",
-    src: "etc/fstab.enableswap",
     vendor: true,
 }
