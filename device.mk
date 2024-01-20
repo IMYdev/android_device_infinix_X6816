@@ -55,6 +55,23 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lion
+# WI-FI   
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service-lazy.lion
+
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
 # Prebuilts - Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)-kernel/dtb.img:dtb.img
