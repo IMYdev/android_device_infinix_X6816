@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/FULL-64
+DEVICE_PATH := device/infinix/X6816
 
 # A/B
 AB_OTA_UPDATER := true
@@ -27,7 +27,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := Infinix-X6816
+TARGET_BOOTLOADER_BOARD_NAME := CY-X6816-XQ683-A
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -42,8 +42,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := FULL-64_defconfig
-TARGET_KERNEL_SOURCE := kernel/infinix/FULL-64
+TARGET_KERNEL_CONFIG := X6816_defconfig
+TARGET_KERNEL_SOURCE := kernel/infinix/X6816
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -71,12 +71,9 @@ TARGET_BOARD_PLATFORM := mt6765
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.enableswap
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6765
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
@@ -91,4 +88,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/infinix/FULL-64/BoardConfigVendor.mk
+include vendor/infinix/X6816/BoardConfigVendor.mk

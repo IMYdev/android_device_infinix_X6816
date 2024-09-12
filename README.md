@@ -1,4 +1,4 @@
-# Android device tree for Infinix  (FULL-64)
+# Android device tree for Infinix  (X6816)
 
 ```
 #

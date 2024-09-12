@@ -1,9 +1,6 @@
 # Audio
 ro.audio.silent=0
 
-# Camera
-vendor.camera.tran.nums=1
-
 # Display
 ro.opengles.version=196610
 
@@ -17,7 +14,6 @@ wifi.tethering.interface=ap0
 Build.BRAND=MTK
 mediatek.wlan.ctia=0
 net.bt.name=Android
-persist.sys.tran.device.name=FULL-64
 ro.camera.sound.forced=0
 ro.iorapd.enable=true
 ro.kernel.zio=38,108,105,16
@@ -54,7 +50,6 @@ ro.sys.usb.storage.type=mtp
 ro.zygote.preload.enable=0
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
-transsion.device.name=FULL-64
 vendor.rild.libargs=-d /dev/ttyC0
 vendor.rild.libpath=mtk-ril.so
 
