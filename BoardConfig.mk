@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from the proprietary version
+-include vendor/infinix/X6816/BoardConfigVendor.mk
+
 DEVICE_PATH := device/infinix/X6816
 
 # A/B
