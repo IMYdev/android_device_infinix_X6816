@@ -3,7 +3,14 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
+# A/B
+AB_OTA_PARTITIONS += \
+    boot \
+    product \
+    system \
+    system_ext \
+    vendor
+    
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -37,9 +44,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -50,10 +54,6 @@ PRODUCT_CHARACTERISTICS := default
 PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
-    fstab.enableswap \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
     init.aee.rc \
     init.ago.rc \
     init.connectivity.rc \
@@ -62,15 +62,9 @@ PRODUCT_PACKAGES += \
     init.mt6765.usb.rc \
     init.project.rc \
     init.sensor_1_0.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    multi_init.rc \
     init.recovery.mt6765.rc \
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.enableswap:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.enableswap
+    fstab.mt6765 \
+    ueventd.mt6765.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -7,27 +7,6 @@
 // Init scripts
 // Init configuration files
 prebuilt_etc {
-    name: "factory_init.connectivity.rc",
-    src: "etc/factory_init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.project.rc",
-    src: "etc/factory_init.project.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.rc",
-    src: "etc/factory_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.aee.rc",
     src: "etc/init.aee.rc",
     sub_dir: "init/hw",
@@ -83,44 +62,9 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "meta_init.connectivity.rc",
-    src: "etc/meta_init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "meta_init.modem.rc",
-    src: "etc/meta_init.modem.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "meta_init.project.rc",
-    src: "etc/meta_init.project.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "meta_init.rc",
-    src: "etc/meta_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "multi_init.rc",
-    src: "etc/multi_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
 // fstab
 prebuilt_etc {
-    name: "fstab.enableswap",
-    src: "etc/fstab.enableswap",
+    name: "fstab.mt6765",
+    src: "etc/fstab.mt6765",
     vendor: true,
 }
